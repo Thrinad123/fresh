@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     executor: python/default
-    working_directory: /tests
+    working_directory: /fresh
     steps:
       - checkout
       - run: python --version
