@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     executor: python/default
-    working_directory: ~/test
+    working_directory: /c/poc/fresh/tests
     steps:
       - checkout
       - run: python3 hello.py
