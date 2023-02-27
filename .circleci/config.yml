@@ -1,16 +1,15 @@
 version: 2
 jobs:
- build:
- 	working directory:
- 	docker:
-   	  - image: circleci/python:3.9.7
- 	steps:
-    		checkout:
-    		run : python3 hello.py
- test: 
-     working directory:
- 	docker:
-   		image:
- 	steps:
-    		checkout:
-    		run : python3 hello_test.py
+  build:
+    docker:
+      - image: circleci/python:3.9.7
+    steps:
+      - checkout
+      - run: pip install -r requirements.txt
+      - run: python hello.py
+  test:
+     docker:
+      - image: circleci/python:3.9.7 
+    steps:
+       - checkout
+       -run: python3 hello_test.py   
