@@ -6,12 +6,15 @@ orbs:
 jobs:
   build:
     executor: python/default
-    working_directory: /fresh
     steps:
       - checkout
-      - run: python --version
-      - run: pip install -r requirements.txt
-      - run: python3 hello.py
+      - run:
+          name: run python --version
+          command:python3 --version
+      - run: 
+          name: run python3 hello.py
+          command: python3 /fresh/tests/hello.py
+    
   test:
     executor: python/default
     steps:
