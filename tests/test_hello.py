@@ -1,9 +1,9 @@
 
 from hello import say_hello
 ##class TestHello(unittest.TestCase):
-    def test_say_hello():
+def test_say_hello():
         assert say_hello("Alice") == "Hello, Alice!"
-        assert say_hello("bob") == "Hello, Bob!"
+        assert say_hello("bob") == "Hello, Thrinad!"
         print("above function is working fine ")
 
 if __name__ == '__main__':
